@@ -26473,6 +26473,7 @@ cr.plugins_.Text = function(runtime)
 	};
 	instanceProto.parseFont = function ()
 	{
+		if(!this.font) return;
 		var arr = this.font.split(" ");
 		var i;
 		for (i = 0; i < arr.length; i++)
@@ -30393,6 +30394,7 @@ cr.plugins_.rex_bbcodeText = function(runtime)
 	};
 	instanceProto.parseFont = function ()
 	{
+        if(!this.font) return;
 		var arr = this.font.split(" ");
 		var i;
 		for (i = 0; i < arr.length; i++)
