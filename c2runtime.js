@@ -30719,6 +30719,7 @@ cr.plugins_.rex_bbcodeText = function(runtime)
     };
 	instanceProto.setShadow = function(offsetX, offsetY, blur_, color_)
 	{
+        if(!color_) return;
         color_ = color_.replace(/ /g,'');
         var shadow = offsetX.toString() + "px " + offsetY.toString() + "px " + blur_.toString() + "px " + color_;
 	    this.textShadow = shadow;
